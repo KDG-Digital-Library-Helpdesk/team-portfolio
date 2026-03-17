@@ -5,9 +5,9 @@
   --color-surface:      #FDFAF5;
   --color-ink:          #2C1810;
   --color-ink-muted:    #6B5344;
-  --color-accent:       #8B4513;
-  --color-accent-light: #C68642;
-  --color-accent-hover: #7A3B10;
+  --color-accent:       #1E5C42;
+  --color-accent-light: #52B788;
+  --color-accent-hover: #124D35;
   --color-border:       #D4C4A8;
   --color-border-light: #E8DEC8;
 
@@ -1169,9 +1169,9 @@ footer {
   --color-surface:      #241408;
   --color-ink:          #F0E8D8;
   --color-ink-muted:    #B8A898;
-  --color-accent:       #C68642;
-  --color-accent-light: #E8A855;
-  --color-accent-hover: #D4963A;
+  --color-accent:       #3D9970;
+  --color-accent-light: #74C69D;
+  --color-accent-hover: #52B788;
   --color-border:       #4A3828;
   --color-border-light: #3A2818;
 }

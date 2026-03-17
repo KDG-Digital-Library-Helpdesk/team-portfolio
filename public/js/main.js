@@ -152,13 +152,23 @@ function initCardFlip() {
   const cards = $$('.team-card');
   if (!cards.length) return;
 
-  cards.forEach(card => {
-    // Toggle flip on click (works for tap and mouse click)
-    card.addEventListener('click', () => {
-      card.classList.toggle('is-flipped');
-    });
+  const isHoverDevice = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 
-    // Allow keyboard flip
+  cards.forEach(card => {
+    // On hover devices (desktop), CSS :hover handles the flip — JS click should do nothing
+    // On touch devices (mobile), toggle is-flipped on tap
+    if (!isHoverDevice) {
+      card.addEventListener('click', () => {
+        card.classList.toggle('is-flipped');
+      });
+
+      // Prevent LinkedIn link clicks from bubbling up and toggling the flip
+      card.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', (e) => e.stopPropagation());
+      });
+    }
+
+    // Allow keyboard flip on both device types
     card.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
