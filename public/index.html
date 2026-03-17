@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="KdG Digital Library Helpdesk, Team Portfolio" />
+  <title>KdG Digital Library Helpdesk, Team Portfolio</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- READING PROGRESS BAR -->
+  <div id="reading-progress" role="progressbar" aria-label="Page reading progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+
+  <!-- SIDE NAV DOTS (desktop only) -->
+  <nav id="side-nav" aria-label="Section navigation">
+    <a href="#hero"    class="nav-dot active" data-label="Home"   aria-label="Go to Home section"></a>
+    <a href="#team"    class="nav-dot"         data-label="Team"   aria-label="Go to Team section"></a>
+    <a href="#pitch"   class="nav-dot"         data-label="Pitch"  aria-label="Go to Pitch section"></a>
+    <a href="#article" class="nav-dot"         data-label="Article" aria-label="Go to Article section"></a>
+    <a href="#slides"  class="nav-dot"         data-label="Slides" aria-label="Go to Slides section"></a>
+  </nav>
+
+  <!-- HEADER -->
+  <header id="site-header">
+    <div class="header-inner container">
+
+      <a href="#hero" class="site-logo" aria-label="KdG Library Helpdesk">
+        <span class="logo-mark" aria-hidden="true">&#9632;</span>
+        <span class="logo-text">KdG Library Helpdesk</span>
+      </a>
+
+      <button id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+      <nav id="main-nav" aria-label="Primary navigation">
+        <a href="#hero"    class="nav-link">Home</a>
+        <a href="#team"    class="nav-link">Team</a>
+        <a href="#pitch"   class="nav-link">Pitch</a>
+        <a href="#article" class="nav-link">Article</a>
+        <a href="#slides"  class="nav-link">Slides</a>
+      </nav>
+
+      <button id="theme-toggle" aria-label="Toggle dark mode">
+        <span class="icon-light" aria-hidden="true">&#9788;</span>
+        <span class="icon-dark"  aria-hidden="true">&#9790;</span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+
+    <!-- HERO -->
+    <section id="hero">
+      <div class="container hero-inner">
+
+        <div class="library-stamp" aria-hidden="true">
+          <div class="stamp-inner">
+            <div class="stamp-title">KdG</div>
+            <div class="stamp-subtitle">Digital Library<br>Helpdesk</div>
+            <div class="stamp-year">2025–2026</div>
+          </div>
+        </div>
+
+        <div class="hero-text">
+          <p class="hero-dewey dewey-number" aria-hidden="true">000</p>
+          <h1>Digital Library<br><em>Helpdesk</em></h1>
+          <p class="lead-paragraph">
+            A smart, AI-powered helpdesk for the KdG library that connects students with knowledge and librarians with context.
+          </p>
+          <div class="hero-cta">
+            <a href="#team"  class="btn btn-primary">Meet the Team</a>
+            <a href="#pitch" class="btn btn-secondary">Watch Pitch</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bookshelf divider -->
+      <div class="bookshelf-divider" aria-hidden="true">
+        <div class="book-spines" id="book-spines"></div>
+        <div class="shelf-board"></div>
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <section id="team" data-reveal>
+      <div class="container">
+        <header class="section-header">
+          <p class="dewey-number" aria-hidden="true">001</p>
+          <h2>The Team</h2>
+          <p class="section-subtitle">The people behind the project</p>
+        </header>
+
+        <div class="team-grid">
+
+          <!-- Member 1 -->
+          <div class="team-card" data-reveal tabindex="0" aria-label="Team member Markus, tap to see bio">
+            <div class="card-inner">
+              <div class="card-front">
+                <div class="card-photo-wrap">
+                  <img src="assets/images/team/member-1.jpg" alt="Photo of Markus" loading="lazy"
+                       onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'400\' viewBox=\'0 0 400 400\'%3E%3Crect fill=\'%23C68642\' width=\'400\' height=\'400\'/%3E%3Ctext fill=\'%23FFF\' font-size=\'120\' font-family=\'serif\' x=\'200\' y=\'240\' text-anchor=\'middle\'%3EM%3C/text%3E%3C/svg%3E'" />
+                </div>
+                <div class="card-name">Markus Tiedemann</div>
+                <div class="card-role">Backend Developer</div>
+                <div class="flip-hint" aria-hidden="true">Tap to flip ↩</div>
+              </div>
+              <div class="card-back" aria-hidden="true">
+                <h3>Markus</h3>
+                <p class="card-bio">
+                  Backend engineer responsible for the FastAPI service, JWT auth,
+                  WebSocket chat routing, and Power Automate integrations.
+                </p>
+                <a href="https://www.linkedin.com/in/markustiedemann/" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Member 2 -->
+          <div class="team-card" data-reveal tabindex="0" aria-label="Team member 2, tap to see bio">
+            <div class="card-inner">
+              <div class="card-front">
+                <div class="card-photo-wrap">
+                  <img src="assets/images/team/member-2.jpg" alt="Photo of Team Member 2" loading="lazy"
+                       onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'400\' viewBox=\'0 0 400 400\'%3E%3Crect fill=\'%238B4513\' width=\'400\' height=\'400\'/%3E%3Ctext fill=\'%23FFF\' font-size=\'120\' font-family=\'serif\' x=\'200\' y=\'240\' text-anchor=\'middle\'%3EA%3C/text%3E%3C/svg%3E'" />
+                </div>
+                <div class="card-name">Abel Turlej</div>
+                <div class="card-role">Frontend Developer</div>
+                <div class="flip-hint" aria-hidden="true">Tap to flip ↩</div>
+              </div>
+              <div class="card-back" aria-hidden="true">
+                <h3>Abel</h3>
+                <p class="card-bio">
+                  Frontend engineer responsible for the React 19 + Vite interface,
+                  component design, and user experience.
+                </p>
+                <a href="https://www.linkedin.com/in/vivian-abel-turlej-567132277/" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Member 3 -->
+          <div class="team-card" data-reveal tabindex="0" aria-label="Team member 3, tap to see bio">
+            <div class="card-inner">
+              <div class="card-front">
+                <div class="card-photo-wrap">
+                  <img src="assets/images/team/member-3.jpg" alt="Photo of Team Member 3" loading="lazy"
+                       onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'400\' viewBox=\'0 0 400 400\'%3E%3Crect fill=\'%232C1810\' width=\'400\' height=\'400\'/%3E%3Ctext fill=\'%23FFF\' font-size=\'120\' font-family=\'serif\' x=\'200\' y=\'240\' text-anchor=\'middle\'%3EB%3C/text%3E%3C/svg%3E'" />
+                </div>
+                <div class="card-name">Nathan Hagos Berhe</div>
+                <div class="card-role">AI / RAG Engineer</div>
+                <div class="flip-hint" aria-hidden="true">Tap to flip ↩</div>
+              </div>
+              <div class="card-back" aria-hidden="true">
+                <h3>Nathan</h3>
+                <p class="card-bio">
+                  AI engineer responsible for the RAG pipeline, Ollama/Mistral integration,
+                  ChromaDB knowledge base, and language detection.
+                </p>
+                <a href="https://www.linkedin.com/in/nathan-hagos-berhe-b86623222/" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- .team-grid -->
+      </div>
+    </section>
+
+    <!-- PITCH -->
+    <section id="pitch" data-reveal>
+      <div class="container">
+        <header class="section-header">
+          <p class="dewey-number" aria-hidden="true">002</p>
+          <h2>Project Pitch</h2>
+          <p class="section-subtitle">Our vision in two minutes</p>
+        </header>
+
+        <div class="pitch-layout">
+          <div class="pitch-text" data-reveal>
+            <h3>Your question. Answered now.</h3>
+            <p class="pitch-scenario">
+              It's Sunday evening. The library is closed. Your assignment is due Monday.
+              You need to know if KdG has access to a specific IEEE journal, and if not,
+              how to request it through inter-library loan.
+            </p>
+            <p class="pitch-pivot">
+              Old answer: send an email. Wait two days.<br>
+              <strong>New answer: ask the helpdesk. Get it in under two seconds.</strong>
+            </p>
+
+            <div class="pitch-stats" aria-label="Key facts">
+              <div class="stat-card">
+                <span class="stat-value">&lt;&nbsp;2s</span>
+                <span class="stat-label">AI response</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-value">NL&nbsp;+&nbsp;EN</span>
+                <span class="stat-label">bilingual</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-value">24/7</span>
+                <span class="stat-label">always on</span>
+              </div>
+            </div>
+
+            <ul class="feature-list">
+              <li><strong>Knows your library.</strong> Answers grounded in the real KdG FAQ, not the open internet</li>
+              <li><strong>Escalates intelligently.</strong> Routes to a librarian only when it genuinely needs one</li>
+              <li><strong>Librarians stay in control.</strong> Live dashboard, one-click pickup, Teams notifications</li>
+              <li><strong>Built to last.</strong> Swap the AI model without touching the chat logic</li>
+            </ul>
+          </div>
+
+          <div class="pitch-video" data-reveal>
+            <div class="video-wrapper">
+              <iframe
+                src="https://www.youtube.com/embed/2JX8MO8IHF8"
+                title="KdG Library Helpdesk Project Pitch"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                loading="lazy">
+              </iframe>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ARTICLE -->
+    <section id="article" data-reveal>
+      <div class="container">
+        <header class="section-header">
+          <p class="dewey-number" aria-hidden="true">003</p>
+          <h2>Technical Article</h2>
+          <p class="section-subtitle">A deep dive into our architecture</p>
+        </header>
+
+        <div class="slides-container" data-reveal>
+          <div class="viewer-toolbar">
+            <a href="assets/articles/article.pdf" download class="btn btn-primary">
+              Download Article (PDF)
+            </a>
+            <span class="viewer-note">Article opens inline below, or download here</span>
+          </div>
+
+          <div class="slides-viewer">
+            <!--
+              BEFORE DEPLOYMENT (local dev): native iframe for local testing
+              AFTER DEPLOYMENT: swap src to Google Docs viewer URL:
+              https://docs.google.com/viewer?url=https://YOUR-GROUP.gitlab.io/team-portfolio/assets/articles/article.pdf&embedded=true
+            -->
+            <iframe
+              id="article-pdf-viewer"
+              src="assets/articles/article.pdf"
+              title="KdG Library Helpdesk Technical Article"
+              loading="lazy">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDES -->
+    <section id="slides" data-reveal>
+      <div class="container">
+        <header class="section-header">
+          <p class="dewey-number" aria-hidden="true">004</p>
+          <h2>Conference Slides</h2>
+          <p class="section-subtitle">Our end-of-year presentation</p>
+        </header>
+
+        <div class="slides-container" data-reveal>
+          <div class="viewer-toolbar">
+            <a href="assets/slides/conference-slides.pdf" download class="btn btn-primary" id="pdf-download">
+              Download Slides (PDF)
+            </a>
+            <span class="viewer-note">Slides open inline below, or download here</span>
+          </div>
+
+          <div class="slides-viewer">
+            <!--
+              BEFORE DEPLOYMENT (local dev): shows local PDF via native iframe
+              AFTER DEPLOYMENT: swap src to Google Docs viewer URL:
+              https://docs.google.com/viewer?url=https://YOUR-GROUP.gitlab.io/team-portfolio/assets/slides/conference-slides.pdf&embedded=true
+            -->
+            <iframe
+              id="pdf-viewer"
+              src="assets/slides/conference-slides.pdf"
+              title="KdG Library Helpdesk Conference Slides"
+              loading="lazy">
+            </iframe>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-stamp" aria-hidden="true">
+        <div class="stamp-inner stamp-inner--small">
+          <div class="stamp-title">KdG</div>
+          <div class="stamp-year">2025–26</div>
+        </div>
+      </div>
+      <div class="footer-credit">
+        <p>Karel de Grote University of Applied Sciences and Arts</p>
+        <p class="footer-course">Project: Digital Library Helpdesk</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
