@@ -215,7 +215,24 @@ function initBookSpines() {
 }
 
 
-// 9. PDF FALLBACK (Google Docs viewer)
+// 9. TEAM PHOTO FALLBACK
+function initPhotoFallback() {
+  $$('.card-photo-wrap img').forEach(img => {
+    img.addEventListener('error', () => {
+      const color   = img.dataset.fallbackColor   || '#555';
+      const initial = img.dataset.fallbackInitial || '?';
+      img.src = 'data:image/svg+xml,' + encodeURIComponent(
+        `<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">` +
+        `<rect fill="${color}" width="400" height="400"/>` +
+        `<text fill="#FFF" font-size="120" font-family="serif" x="200" y="240" text-anchor="middle">${initial}</text>` +
+        `</svg>`
+      );
+    }, { once: true });
+  });
+}
+
+
+// 10. PDF FALLBACK (Google Docs viewer) — covers all four PDF iframes
 function initPdfFallback() {
   // Handles all PDF iframes on the page
   // After deployment, swap each iframe's src to Google Docs viewer (see README).
@@ -227,7 +244,7 @@ function initPdfFallback() {
       if (!container) return;
       container.innerHTML = `
         <div style="display:flex;align-items:center;justify-content:center;height:100%;
-                    font-family:var(--font-body);color:var(--color-ink-muted);
+                    color:var(--color-ink-muted);
                     text-align:center;padding:2rem;flex-direction:column;gap:1rem;">
           <p style="font-size:1rem;">
             PDF viewer unavailable. Use the Download button above.
@@ -238,7 +255,7 @@ function initPdfFallback() {
 }
 
 
-// 10. SMOOTH SCROLL WITH HEADER OFFSET
+// 11. SMOOTH SCROLL WITH HEADER OFFSET
 function getHeaderHeight() {
   const header = $('#site-header');
   return header ? header.offsetHeight : 64;
@@ -268,6 +285,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSideNav();
   initCardFlip();
   initBookSpines();
+  initPhotoFallback();
   initPdfFallback();
   initSmoothScroll();
 });
