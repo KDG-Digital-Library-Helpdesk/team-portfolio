@@ -219,7 +219,7 @@ function initBookSpines() {
 function initPdfFallback() {
   // Handles all PDF iframes on the page
   // After deployment, swap each iframe's src to Google Docs viewer (see README).
-  const iframes = $$('#pdf-viewer, #article-pdf-viewer');
+  const iframes = $$('#pdf-viewer, #article-pdf-viewer, #prototype-doc-viewer, #user-guide-viewer');
 
   iframes.forEach(iframe => {
     iframe.addEventListener('error', () => {

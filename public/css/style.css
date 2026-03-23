@@ -1079,7 +1079,9 @@ code {
 }
 
 #pdf-viewer,
-#article-pdf-viewer {
+#article-pdf-viewer,
+#prototype-doc-viewer,
+#user-guide-viewer {
   width: 100%;
   height: 100%;
   border: 0;
@@ -1087,7 +1089,40 @@ code {
 }
 
 
-/* 14. FOOTER */
+/* 14. DOCS GRID */
+.docs-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+}
+
+@media (min-width: 900px) {
+  .docs-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.doc-panel-title {
+  margin-bottom: var(--space-4);
+  font-size: clamp(1.125rem, 2vw, var(--text-xl));
+}
+
+.doc-panel .slides-viewer {
+  height: min(65vh, 720px);
+}
+
+@media (max-width: 899px) {
+  .doc-panel .slides-viewer {
+    height: 80vh;
+  }
+}
+
+[data-theme="dark"] .doc-panel .slides-viewer {
+  background: #fff;
+}
+
+
+/* 15. FOOTER */
 footer {
   padding: var(--space-12) 0;
   background: var(--color-ink);
@@ -1141,7 +1176,7 @@ footer {
 }
 
 
-/* 15. REVEAL ANIMATION */
+/* 16. REVEAL ANIMATION */
 [data-reveal] {
   opacity: 0;
   transform: translateY(24px);
@@ -1156,14 +1191,14 @@ footer {
 }
 
 
-/* 16. THEME TOGGLE */
+/* 17. THEME TOGGLE */
 [data-theme="dark"] .icon-light { display: none; }
 [data-theme="dark"] .icon-dark  { display: block; }
 :not([data-theme="dark"]) .icon-light { display: block; }
 :not([data-theme="dark"]) .icon-dark  { display: none; }
 
 
-/* 17. DARK MODE */
+/* 18. DARK MODE */
 [data-theme="dark"] {
   --color-bg:           #1A1008;
   --color-surface:      #241408;
@@ -1218,7 +1253,7 @@ footer {
 }
 
 
-/* 18. MEDIA QUERIES (mobile overrides) */
+/* 19. MEDIA QUERIES (mobile overrides) */
 @media (max-width: 768px) {
   /* Header: show hamburger, hide nav */
   #nav-toggle {

@@ -25,6 +25,7 @@
     <a href="#pitch"   class="nav-dot"         data-label="Pitch"  aria-label="Go to Pitch section"></a>
     <a href="#article" class="nav-dot"         data-label="Article" aria-label="Go to Article section"></a>
     <a href="#slides"  class="nav-dot"         data-label="Slides" aria-label="Go to Slides section"></a>
+    <a href="#docs"    class="nav-dot"         data-label="Docs"   aria-label="Go to Documents section"></a>
   </nav>
 
   <!-- HEADER -->
@@ -48,6 +49,7 @@
         <a href="#pitch"   class="nav-link">Pitch</a>
         <a href="#article" class="nav-link">Article</a>
         <a href="#slides"  class="nav-link">Slides</a>
+        <a href="#docs"    class="nav-link">Docs</a>
       </nav>
 
       <button id="theme-toggle" aria-label="Toggle dark mode">
@@ -129,11 +131,11 @@
           </div>
 
           <!-- Member 2 -->
-          <div class="team-card" data-reveal tabindex="0" aria-label="Team member 2, tap to see bio">
+          <div class="team-card" data-reveal tabindex="0" aria-label="Team member Abel, tap to see bio">
             <div class="card-inner">
               <div class="card-front">
                 <div class="card-photo-wrap">
-                  <img src="assets/images/team/member-2.jpg" alt="Photo of Team Member 2" loading="lazy"
+                  <img src="assets/images/team/member-2.jpg" alt="Photo of Abel" loading="lazy"
                        onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'400\' viewBox=\'0 0 400 400\'%3E%3Crect fill=\'%238B4513\' width=\'400\' height=\'400\'/%3E%3Ctext fill=\'%23FFF\' font-size=\'120\' font-family=\'serif\' x=\'200\' y=\'240\' text-anchor=\'middle\'%3EA%3C/text%3E%3C/svg%3E'" />
                 </div>
                 <div class="card-name">Abel Turlej</div>
@@ -152,11 +154,11 @@
           </div>
 
           <!-- Member 3 -->
-          <div class="team-card" data-reveal tabindex="0" aria-label="Team member 3, tap to see bio">
+          <div class="team-card" data-reveal tabindex="0" aria-label="Team member Nathan, tap to see bio">
             <div class="card-inner">
               <div class="card-front">
                 <div class="card-photo-wrap">
-                  <img src="assets/images/team/member-3.jpg" alt="Photo of Team Member 3" loading="lazy"
+                  <img src="assets/images/team/member-3.jpg" alt="Photo of Nathan" loading="lazy"
                        onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'400\' viewBox=\'0 0 400 400\'%3E%3Crect fill=\'%232C1810\' width=\'400\' height=\'400\'/%3E%3Ctext fill=\'%23FFF\' font-size=\'120\' font-family=\'serif\' x=\'200\' y=\'240\' text-anchor=\'middle\'%3EB%3C/text%3E%3C/svg%3E'" />
                 </div>
                 <div class="card-name">Nathan Hagos Berhe</div>
@@ -295,6 +297,59 @@
           </div>
         </div>
 
+      </div>
+    </section>
+
+    <!-- DOCS -->
+    <section id="docs" data-reveal>
+      <div class="container">
+        <header class="section-header">
+          <p class="dewey-number" aria-hidden="true">005</p>
+          <h2>Project Documents</h2>
+          <p class="section-subtitle">Technical documentation &amp; user guide</p>
+        </header>
+
+        <div class="docs-grid" data-reveal>
+
+          <!-- Prototype Documentation -->
+          <div class="doc-panel">
+            <h3 class="doc-panel-title">Technical Documentation</h3>
+            <div class="viewer-toolbar">
+              <a href="assets/articles/PrototypeDocumentation.pdf" download class="btn btn-primary">
+                Download (PDF)
+              </a>
+              <span class="viewer-note">Opens inline below, or download here</span>
+            </div>
+            <div class="slides-viewer">
+              <iframe
+                id="prototype-doc-viewer"
+                src="https://docs.google.com/viewer?url=https://team-portfolio-6b5760.gitlab.io/assets/articles/PrototypeDocumentation.pdf&embedded=true"
+                title="KdG Library Helpdesk Technical Documentation"
+                loading="lazy">
+              </iframe>
+            </div>
+          </div>
+
+          <!-- User Guide -->
+          <div class="doc-panel">
+            <h3 class="doc-panel-title">User Guide</h3>
+            <div class="viewer-toolbar">
+              <a href="assets/articles/UserGuide.pdf" download class="btn btn-primary">
+                Download (PDF)
+              </a>
+              <span class="viewer-note">Opens inline below, or download here</span>
+            </div>
+            <div class="slides-viewer">
+              <iframe
+                id="user-guide-viewer"
+                src="https://docs.google.com/viewer?url=https://team-portfolio-6b5760.gitlab.io/assets/articles/UserGuide.pdf&embedded=true"
+                title="KdG Library Helpdesk User Guide"
+                loading="lazy">
+              </iframe>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
 
